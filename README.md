@@ -12,12 +12,13 @@ Here are the formulas I came up with for figuring out the fromRow and toRow indi
 fromRow = ((threadNumber-1) x N)/numberOfThreads
 toRow = ((threadNumber) x N)/numberOfThreads-1
 
+
 As shown below, this matrix slicing algorithm works even when N is not divisible by numberOfThreads.
 
 Case for N = 2400, numberOfThreads = 7(2400 is not divisible by 7):
 
-Thread 1: fromRow = 0, toRow = 341 
-Thread 2: fromRow = 342, toRow = 684  
+Thread 1: fromRow = 0, toRow = 341
+Thread 2: fromRow = 342, toRow = 684
 Thread 3: fromRow = 685, toRow = 1027
 Thread 4: fromRow = 1028, toRow = 1370
 Thread 5: fromRow = 1371, toRow = 1713
